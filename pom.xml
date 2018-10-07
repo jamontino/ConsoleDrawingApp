@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jam.app</groupId>
-    <artifactId>DrawingApp</artifactId>
+    <artifactId>ConsoleDrawingApp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>

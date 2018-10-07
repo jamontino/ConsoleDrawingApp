@@ -13,7 +13,7 @@
 Option 1:
 After unpacking, open your your console of choice and navigate to the project location and execute below
 
-    java -jar ./runnable/DrawingApp-1.0-SNAPSHOT.jar
+    java -jar ./runnable/ConsoleDrawingApp-1.0-SNAPSHOT.jar
 
 Option 2:
 In case you want to generate from code (and have maven installed), run below:
@@ -22,7 +22,7 @@ In case you want to generate from code (and have maven installed), run below:
 
 This will generate a new jar file that can then be executed using below:
 
-    java -jar ./runnable/DrawingApp-1.0-SNAPSHOT.jar
+    java -jar ./runnable/ConsoleDrawingApp-1.0-SNAPSHOT.jar
 
 ********************************************
 *   SPECIAL CASES/MENTIONS
@@ -39,11 +39,4 @@ I'm assuming that the product owner for this challenge might want to support col
 
 Above library might help out with that as it supports colored display on the console.
 
-Ofcourse, this would mean a change in the code =) But hhopefully I've structured the code in a way that will allow easy modification if that is needed.
-
-
-Btw, this entire project is uploaded onto my personal Github account (link below).
-
-    https://github.com/jamontino/ConsoleDrawingApp
-
-If this is not allowed, please let me know via email and I will take it down.
+Ofcourse, this would mean a change in the code =) But hopefully I've structured the code in a way that will allow easy modification if that is needed.
