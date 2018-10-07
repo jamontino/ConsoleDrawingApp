@@ -28,6 +28,13 @@ This will generate a new jar file that can then be executed using below:
 *   SPECIAL CASES/MENTIONS
 ********************************************
 
+1. Creating a new Canvas when one already exists will delete the old Canvas
+
+2. Lines and Rectangles can overwrite each other. Nothing is mentioned in the challenge about coordinate collision.
+
+3. Bucket fill can fill any type of "color" or character as long (even the default "x").
+
+
 Nothing has been mentioned on how the output is to be displayed, only that it be displayed on the console.
 
 My earlier attempts to just print the out to System.out looked ugly. Hence I started looking for alternatives to the console display.

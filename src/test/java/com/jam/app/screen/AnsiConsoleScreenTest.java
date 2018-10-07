@@ -21,7 +21,7 @@ public class AnsiConsoleScreenTest {
     @Test
     public void getDisplayText() {
         String actual = testSubject.getDisplayText();
-        String expected = "enter something: \n";
+        String expected = "enter command: \n";
         assertEquals(expected, actual);
     }
 }

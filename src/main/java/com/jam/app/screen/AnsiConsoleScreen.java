@@ -9,7 +9,7 @@ import static org.fusesource.jansi.Ansi.ansi;
 
 public class AnsiConsoleScreen {
 
-    private static final String INPUT_PROMPT = "enter something: ";
+    private static final String INPUT_PROMPT = "enter command: ";
     private Painter painter;
 
     public AnsiConsoleScreen() {
