@@ -3,7 +3,7 @@
 ********************************************
 
 ./readMe.txt            (this file)
-./ConsoleDrawingApp     (directory containingsource code)
+./ConsoleDrawingApp     (directory containing source code)
 ./runnable              (directory containing runnable jar for convenience)
 
 ********************************************
@@ -22,7 +22,7 @@ In case you want to generate from code (and have maven installed), run below:
 
 This will generate a new jar file that can then be executed using below:
 
-    java -jar ./runnable/ConsoleDrawingApp-1.0-SNAPSHOT.jar
+    java -jar ./ConsoleDrawingApp/target/ConsoleDrawingApp-1.0-SNAPSHOT.jar
 
 ********************************************
 *   SPECIAL CASES/MENTIONS
