@@ -1,8 +1,7 @@
 package com.jam.app.screen;
 
-import com.jam.app.ConsolePainter;
+import com.google.common.annotations.VisibleForTesting;
 import com.jam.app.Painter;
-import com.jam.app.model.Canvas;
 import com.jam.app.model.CanvasReaderUtil;
 import org.fusesource.jansi.AnsiConsole;
 
@@ -19,29 +18,29 @@ public class AnsiConsoleScreen {
 
     public void refresh() {
         clearScreen();
-        printPrompt();
-        print(painter.getCanvas());
-        printPainterMessage();
+        print(getDisplayText());
         moveCursorToPrompt();
     }
 
-    private void print(Canvas canvas) {
-        System.out.println(CanvasReaderUtil.getCanvasAsString(canvas));
+    @VisibleForTesting
+    String getDisplayText() {
+        String displayText;
+        displayText = INPUT_PROMPT + "\n";
+        displayText = displayText.concat(CanvasReaderUtil.getCanvasAsString(painter.getCanvas()));
+        displayText = displayText.concat(painter.getMessage());
+
+        return displayText;
+    }
+
+    private void print(String displayText) {
+        System.out.println(displayText);
     }
 
     private void moveCursorToPrompt() {
         System.out.print(ansi().cursor(0, INPUT_PROMPT.length() + 1));
     }
 
-    private void printPrompt() {
-        System.out.println(INPUT_PROMPT);
-    }
-
-    private void printPainterMessage() {
-        System.out.println(painter.getMessage());
-    }
-
-    public void clearScreen() {
+    private void clearScreen() {
         System.out.print(ansi().cursor(0, 0).eraseScreen());
     }
 

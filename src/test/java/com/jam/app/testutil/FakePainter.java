@@ -5,7 +5,7 @@ import com.jam.app.model.Canvas;
 
 public class FakePainter implements Painter {
     private Canvas canvas;
-    private String message;
+    private String message = "";
 
     @Override
     public void paint() {

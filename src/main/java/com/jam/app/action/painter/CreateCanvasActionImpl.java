@@ -5,7 +5,7 @@ import com.jam.app.action.AbstractPainterAction;
 import com.jam.app.exception.ActionException;
 import com.jam.app.model.Canvas;
 
-public class CreateCanvasActionImpl extends AbstractPainterAction{
+public class CreateCanvasActionImpl extends AbstractPainterAction {
 
     private static final int BORDER_ADJUSTMENT = 2;
     private final Canvas canvas;
@@ -21,12 +21,8 @@ public class CreateCanvasActionImpl extends AbstractPainterAction{
     }
 
     public void perform() {
-        try{
-            validate();
-            canvas.setCanvasSurface(getNewCanvas());
-        } catch (ActionException e){
-            painter.setMessage(e.getMessage());
-        }
+        validate();
+        canvas.setCanvasSurface(getNewCanvas());
         painter.setCanvas(canvas);
     }
 

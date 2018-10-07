@@ -8,7 +8,6 @@ import com.jam.app.screen.AnsiConsoleScreen;
 public class Main {
 
     public static void main(String[] args) {
-
         InputScanner inputScanner = new InputScanner();
         AnsiConsoleScreen ansiConsoleScreen = new AnsiConsoleScreen();
         CommandFactory commandFactory = new CommandFactory();

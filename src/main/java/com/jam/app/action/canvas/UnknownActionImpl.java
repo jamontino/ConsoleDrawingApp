@@ -2,7 +2,7 @@ package com.jam.app.action.canvas;
 
 import com.jam.app.Painter;
 import com.jam.app.action.AbstractCanvasAction;
-import com.jam.app.model.Canvas;
+import com.jam.app.exception.ActionException;
 
 import java.util.List;
 
@@ -17,6 +17,6 @@ public class UnknownActionImpl extends AbstractCanvasAction {
 
     @Override
     protected void draw() {
-        setCanvasMessage("Unknown input " + input + ".");
+        throw new ActionException("Unknown input " + input + ".");
     }
 }

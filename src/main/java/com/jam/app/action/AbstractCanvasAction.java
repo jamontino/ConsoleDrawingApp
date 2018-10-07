@@ -15,23 +15,15 @@ public abstract class AbstractCanvasAction extends AbstractPainterAction {
     }
 
     public void perform() {
-        try {
-            validate();
-            draw();
-        } catch (ActionException e) {
-            painter.setMessage(e.getMessage());
-        }
+        validate();
+        draw();
     }
 
-    protected void validate(){
-        if (canvas == null){
+    protected void validate() {
+        if (canvas == null) {
             throw new ActionException("There is no canvas! Create one first.");
         }
     }
 
     protected abstract void draw();
-
-    protected void setCanvasMessage(String message) {
-        painter.setMessage(message);
-    }
 }
