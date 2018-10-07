@@ -4,7 +4,7 @@
 
 ./readMe.txt            (this file)
 ./ConsoleDrawingApp     (directory containingsource code)
-./runnable              (directory containng runnable jar for convenience)
+./runnable              (directory containing runnable jar for convenience)
 
 ********************************************
 *   HOW TO RUN
@@ -16,10 +16,34 @@ After unpacking, open your your console of choice and navigate to the project lo
     java -jar ./runnable/DrawingApp-1.0-SNAPSHOT.jar
 
 Option 2:
-In case you want to generate from code, run below
+In case you want to generate from code (and have maven installed), run below:
 
     mvn clean package -DskipTests
 
 This will generate a new jar file that can then be executed using below:
 
     java -jar ./runnable/DrawingApp-1.0-SNAPSHOT.jar
+
+********************************************
+*   SPECIAL CASES/MENTIONS
+********************************************
+
+Nothing has been mentioned on how the output is to be displayed, only that it be displayed on the console.
+
+My earlier attempts to just print the out to System.out looked ugly. Hence I started looking for alternatives to the console display.
+
+I found this small library that helped me with this (Github link below):
+    https://github.com/fusesource/jansi
+
+I'm assuming that the product owner for this challenge might want to support colors in the future (rather than text representation as mentioned in the original challenge).
+
+Above library might help out with that as it supports colored display on the console.
+
+Ofcourse, this would mean a change in the code =) But hhopefully I've structured the code in a way that will allow easy modification if that is needed.
+
+
+Btw, this entire project is uploaded onto my personal Github account (link below).
+
+    https://github.com/jamontino/ConsoleDrawingApp
+
+If this is not allowed, please let me know via email and I will take it down.

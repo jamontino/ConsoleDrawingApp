@@ -8,7 +8,6 @@ public class CanvasReaderUtil {
             for (int y = 0; y < canvas.getCanvasHeight(); y++) {
                 for (int x = 0; x < canvas.getCanvasWidth(); x++) {
                     output = output.concat(canvas.getCanvasSurface()[x][y]);
-
                 }
                 output = output.concat("\n");
             }
